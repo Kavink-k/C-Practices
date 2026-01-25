@@ -439,14 +439,18 @@
 int main()
 {
     int Array1[10], Array2[10], size1, size2, sum = 0;
-    printf("Enter Size:\n");
+    printf("Enter Size1:\n");
     scanf("%d", &size1);
     printf("Enter Elements:\n");
     for (int i = 0; i < size1; i++)
     {
         scanf("%d", &Array1[i]);
     }
+        printf("Enter Size2:\n");
+
     scanf("%d", &size2);
+        printf("Enter Elements:\n");
+
     for (int i = 0; i < size2; i++)
     {
         scanf("%d", &Array2[i]);
