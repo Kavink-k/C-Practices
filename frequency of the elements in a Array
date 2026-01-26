@@ -1,0 +1,33 @@
+
+// Count occurrences of each element in a sorted array
+#include <stdio.h>
+int main()
+{
+    int Arr[10], i, j, size, count;
+
+    printf("Enter size of the array: ");
+    scanf("%d", &size);
+
+    printf("Enter elements of the array: ");
+    for (i = 0; i < size; i++)
+        scanf("%d", &Arr[i]);
+
+    for (i = 0; i < size; i++)
+    {
+        count = 1;  // reset count for every new element
+
+        for (j = i + 1; j < size; j++)
+        {
+            if (Arr[i] == Arr[j])
+                count++;
+            else
+                break;
+        }
+
+        printf("%d - %d\n", Arr[i], count);
+
+        i = j - 1;   // skip counted duplicates
+    }
+
+    return 0;
+}
