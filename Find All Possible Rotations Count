@@ -1,0 +1,31 @@
+// Online C compiler to run C program online
+#include <stdio.h>
+#include <string.h>
+
+
+int main() {
+    // Write C code here
+    printf("Enter String");
+    char S[10],Scopy[10];
+   int  i=0,j,length,rotation=0;
+        scanf("%s",S);
+        length = strlen(S);
+        strcpy(Scopy,S);
+        while(rotation<length){
+            int first= S[0];
+
+            for (j=0;j<length-1;j++){
+                S[j]=S[j+1];
+            }
+            S[length-1]=first;
+            rotation++;
+            if(strcmp(S,Scopy)==0) break;
+        }
+        
+        printf("%d",rotation);
+        
+            return 0;
+}
+        
+    
+
