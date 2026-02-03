@@ -1,0 +1,32 @@
+// Online C compiler to run C program online
+#include <stdio.h>
+#include<string.h>
+
+int main() {
+    // Write C code here
+    char S[10],remove[10],SS[10];
+    int i,j,sum=0;
+    printf("Enter String ");
+    scanf("%s",S);
+    printf("Enter removers ");
+    scanf("%s",remove);
+    int length1 = strlen(S);
+        int length2 = strlen(remove);
+
+    for (i=0;i<length1;i++){
+                    int found=0;
+
+        for (j=0;j<length2;j++){
+            if(S[i]==remove[j]) {
+            found   = 1;
+            break;
+}
+}
+if(!found){
+    SS[sum++]=S[i];
+}
+    }
+    printf("%s",SS);
+
+    return 0;
+}
