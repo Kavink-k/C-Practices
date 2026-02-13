@@ -1,0 +1,26 @@
+// Online C compiler to run C program online
+#include <stdio.h>
+#include <string.h>
+
+int main() {
+    // Write C code here
+    char S[100];
+    int i,upper=0,lower=0,digit=0,symbols=0;
+    printf("ENter String ");
+    scanf("%s",S);
+    int length=strlen(S);
+    for(i=0;i<length;i++){
+        if((int)S[i]>=48 && (int)S[i]<=57){
+            digit++;
+        }else if((int)S[i]>=65 && (int)S[i]<=90){
+            upper++;
+        }else if((int)S[i]>=97 && (int)S[i]<=122){
+            lower++;
+        }else{
+            symbols++;
+        }
+    }
+    
+    printf("uppercase- %d \n lowercase- %d \n digits- %d \n Symbols- %d ",upper,lower,digit,symbols);
+    return 0;
+}
