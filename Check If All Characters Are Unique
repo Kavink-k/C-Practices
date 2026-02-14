@@ -1,0 +1,23 @@
+// Online C compiler to run C program online
+#include <stdio.h>
+#include <string.h>
+int main() {
+    // Write C code here
+    char str[100];
+    int i,length=0,count=0;
+    printf("Enter String ");
+    scanf("%s",str);
+    length=strlen(str);
+    for(i=0;i<length;i++){
+        for(int j=i+1;j<length;j++){
+            if(str[i]==str[j]){
+                count++;
+            }
+            
+        }
+        
+    }
+    if(count>=1) printf("Not Okay"); else printf(" okay");
+    
+    return 0;
+}
