@@ -1,0 +1,30 @@
+#include <stdio.h>
+#include <string.h>
+#include<stdbool.h>
+int main() {
+    char str[100],arr[100];
+    int i,j,hichar=0,hivalue=0,secvalue=0,secchar=0;
+    printf("Enter String: ");
+    scanf("%s",str);
+    int length = strlen(str);
+    bool  visited[length];
+    for(i=0;i<length;i++) visited[i]=false;
+    for(i=0;i<length;i++){
+        if(visited[i]==true){ continue;}
+        int count=1;
+        for(j=i+1;j<length;j++){
+            if(str[i]==str[j]) {
+                visited[j]=true;
+                count++;
+            }
+        }
+        if(count>hivalue){
+            secchar=hichar;
+            hivalue=count;
+            hichar=str[i];
+        }
+    }
+                printf("%c",secchar);
+
+    return 0;
+}
