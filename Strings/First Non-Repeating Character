@@ -1,0 +1,25 @@
+#include <stdio.h>
+#include <string.h>
+int main() {
+   char str[100],hi[100];
+   int i,j,hichar=0;
+   int k=0;
+   printf("Enter String: ");
+   scanf("%s",str);
+   int length = strlen(str);
+   for(i=0;i<length;i++){
+    int count=1;
+       for(j=i+1;j<length;j++){
+           if(str[i]==str[j]){ 
+               count++;
+               break;
+           }
+       } if(count==1){
+               hi[k++]=str[i];
+               }
+       
+   }
+  printf("%c",hi[0]);
+
+    return 0;
+}
