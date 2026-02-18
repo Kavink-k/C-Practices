@@ -1,0 +1,19 @@
+// Online C compiler to run C program online
+#include <stdio.h>
+
+int main() {
+    int arr[100],i,j,n,k;
+    scanf("%d",&n);
+    for (i=0;i<n;i++) scanf("%d",&arr[i]);
+    scanf("%d",&k);
+    int temp[n+k];
+    for (i=0;i<n;i++){ temp[i]=arr[i];} //array copied
+    
+    for(i=0;i<(n-k);i++){
+        temp[n+i]=arr[i]; 
+    }
+    
+  for(i=(n-k);i<(n-k)+n;i++) { printf("%d ",temp[i]);}
+
+    return 0;
+}
